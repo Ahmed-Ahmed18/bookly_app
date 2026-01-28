@@ -1,3 +1,4 @@
+import 'package:first/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +17,9 @@ class BooklyApp extends StatelessWidget {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'BooklyApp',
+        theme: ThemeData().copyWith(
+          scaffoldBackgroundColor:Kprimarycolor
+        ),
         home: SplashView(),
     );
   }
