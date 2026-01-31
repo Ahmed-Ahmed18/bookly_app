@@ -1,5 +1,9 @@
+import 'package:first/constants.dart';
 import 'package:first/core/utils/assets.dart';
+import 'package:first/features/home/presentation/view/home_view.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -13,18 +17,13 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   @override
   void initState() {
     super.initState();
-    animationController=AnimationController(
-        vsync: this,
-        duration: Duration(seconds: 1)
-    );
-    slidingAnimation= Tween<Offset>(begin: const Offset(0, 10) ,end:Offset.zero ).animate(animationController);
-    animationController.forward();
-    slidingAnimation.addListener((){
-      setState(() {
-
-      });
-    });
+    initAnimation();
+    initNavigation();
   }
+
+
+
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -51,5 +50,25 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
         ),
       ],
     );
+  }
+  void initAnimation() {
+    animationController=AnimationController(
+        vsync: this,
+        duration: Duration(seconds: 1)
+    );
+    slidingAnimation= Tween<Offset>(begin: const Offset(0, 10) ,end:Offset.zero ).animate(animationController);
+    animationController.forward();
+    slidingAnimation.addListener((){
+      setState(() {
+
+      });
+    });
+  }
+  void initNavigation() {
+    Future.delayed(Duration(seconds: 3),(){
+      Get.to(()=>HomeView(),
+          transition: Transition.fade ,
+          duration: KtransitionDuration);
+    });
   }
 }
