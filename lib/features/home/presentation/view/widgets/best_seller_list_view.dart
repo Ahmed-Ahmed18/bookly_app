@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import '../../../../../core/utils/assets.dart';
 import 'book_rating.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class BestSellerListViewItem extends StatelessWidget {
+  const BestSellerListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
