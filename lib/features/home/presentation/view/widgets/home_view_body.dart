@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
+import 'best_seller_list_view.dart';
 import 'featured_books_list_view.dart';
 import 'featured_list_view_item.dart';
 
@@ -23,9 +24,10 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(height: 50,),
           Text(
             'Best Seller',
-            style: Styles.titleMedium,
+            style: Styles.textStyle18,
           ),
-      
+          SizedBox(height: 20,),
+          BestSellerListView()
       
         ],
       ),
