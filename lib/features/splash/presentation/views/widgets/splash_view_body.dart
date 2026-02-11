@@ -1,9 +1,9 @@
 import 'package:first/constants.dart';
+import 'package:first/core/utils/app_router.dart';
 import 'package:first/core/utils/assets.dart';
 import 'package:first/features/home/presentation/view/home_view.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -66,9 +66,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   }
   void initNavigation() {
     Future.delayed( const Duration(seconds: 3),(){
-      Get.to(()=>HomeView(),
-          transition: Transition.fade ,
-          duration: KtransitionDuration);
+     GoRouter.of(context).push(AppRouter.KHomeView);
     });
   }
 }
