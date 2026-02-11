@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
 import 'best_seller_list_view.dart';
+import 'best_seller_list_view_item.dart';
 import 'featured_books_list_view.dart';
 import 'featured_list_view_item.dart';
 
@@ -49,21 +50,7 @@ class HomeViewBody extends StatelessWidget {
 
   }
 }
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      physics: NeverScrollableScrollPhysics(),
-      padding: EdgeInsets.zero,
-      itemBuilder:
-      (context,index)=>Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: BestSellerListViewItem(),
-    ),itemCount: 30,);
-  }
-}
 
 
 
