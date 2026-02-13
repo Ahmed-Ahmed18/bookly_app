@@ -7,7 +7,7 @@ import '../../../../../core/utils/styles.dart';
 import 'best_seller_list_view.dart';
 import 'best_seller_list_view_item.dart';
 import 'featured_books_list_view.dart';
-import 'featured_list_view_item.dart';
+import 'custom_book_image.dart';
 
 
 class HomeViewBody extends StatelessWidget {
