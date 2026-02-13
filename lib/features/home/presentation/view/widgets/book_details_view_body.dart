@@ -1,4 +1,5 @@
 import 'package:first/core/utils/styles.dart';
+import 'package:first/features/home/presentation/view/widgets/book_rating.dart';
 import 'package:first/features/home/presentation/view/widgets/custom_book_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,9 @@ class BookDetailsViewBody extends StatelessWidget {
               fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.italic,
             ),),
-          )
+          ),
+          SizedBox(height: 20,),
+          BookRating(mainAxisAlignment: MainAxisAlignment.center,)
       ],),
     );
   }
