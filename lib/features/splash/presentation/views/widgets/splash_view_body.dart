@@ -11,6 +11,9 @@ class SplashViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
           Image.asset(AssetsData.logo),
+          SizedBox(height: 4,),
+          Text('Reed Free Books',
+          textAlign: TextAlign.center,)
       ],
     );
   }
