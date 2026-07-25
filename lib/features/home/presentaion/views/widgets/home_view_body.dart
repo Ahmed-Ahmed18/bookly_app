@@ -1,4 +1,6 @@
 import 'package:booky_app/features/home/presentaion/views/widgets/custom_appbar.dart';
+import 'package:booky_app/features/home/presentaion/views/widgets/featured_book_list_view.dart';
+import 'package:booky_app/features/home/presentaion/views/widgets/featured_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -6,6 +8,8 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Column(children: [CustomAppbar()]));
+    return Scaffold(body: Column(children: [CustomAppbar(),
+    FeaturedBookListView()
+    ]));
   }
 }

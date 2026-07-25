@@ -1,7 +1,5 @@
 import 'package:booky_app/core/utils/assetsData.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({super.key});
@@ -9,14 +7,14 @@ class CustomAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+      padding: const EdgeInsets.only(right: 24,left: 24,top: 40,bottom: 20),
       child: Row(
         children: [
           Image.asset(AssetsData.logo, height: 18),
           Spacer(),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search_rounded, size: 28),
+            icon: const Icon(Icons.search_rounded, size: 28),
           ),
         ],
       ),
