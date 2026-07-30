@@ -1,8 +1,8 @@
-import 'package:booky_app/features/home/presentaion/views/widgets/featured_list_view_item.dart';
+import 'package:booky_app/features/home/presentaion/views/widgets/custom_book_item.dart';
 import 'package:flutter/cupertino.dart';
 
-class FeaturedBookListView extends StatelessWidget {
-  const FeaturedBookListView({super.key});
+class FeaturedListView extends StatelessWidget {
+  const FeaturedListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class FeaturedBookListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: FeaturedListViewItem(),
+          child: CustomBookImage(),
         ),
         itemCount: 20,
       ),
