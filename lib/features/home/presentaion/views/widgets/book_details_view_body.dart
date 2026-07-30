@@ -2,6 +2,9 @@ import 'package:booky_app/features/home/presentaion/views/widgets/custom_book_de
 import 'package:booky_app/features/home/presentaion/views/widgets/custom_book_item.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../constants.dart';
+import '../../../../../core/utils/styles.dart';
+
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
 
@@ -18,6 +21,17 @@ class BookDetailsViewBody extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: width * .25),
               child: CustomBookImage(),
+            ),
+            const SizedBox(height: 43),
+            Text(
+              'Harry Potter and the Goblet of  Fire',
+              style: Styles.textStyle30,
+              overflow: TextOverflow.ellipsis,
+            ),
+            const SizedBox(height: 6),
+            Opacity(
+              opacity: .7,
+              child: Text('J.K. Rowling', style: Styles.textStyle18),
             ),
           ],
         ),
