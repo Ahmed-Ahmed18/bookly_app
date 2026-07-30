@@ -55,6 +55,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     const Text('19.99 €', style: Styles.textStyle20),
                     const Spacer(),
                     BookRating(),
+
                   ],
                 ),
               ],
