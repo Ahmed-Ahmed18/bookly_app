@@ -1,3 +1,4 @@
+import 'package:booky_app/features/home/presentaion/views/widgets/book_rating.dart';
 import 'package:booky_app/features/home/presentaion/views/widgets/custom_book_details_app_bar.dart';
 import 'package:booky_app/features/home/presentaion/views/widgets/custom_book_item.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,8 @@ class BookDetailsViewBody extends StatelessWidget {
               opacity: .7,
               child: Text('J.K. Rowling', style: Styles.textStyle18),
             ),
+            const SizedBox(height: 18),
+            BookRating(mainAxisAlignment: MainAxisAlignment.center,)
           ],
         ),
       ),
