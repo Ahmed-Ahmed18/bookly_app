@@ -1,7 +1,6 @@
 import 'package:booky_app/constants.dart';
 import 'package:booky_app/features/home/domain/entities/book_entity.dart';
 
-import 'package:booky_app/features/home/domain/entities/book_entity.dart';
 import 'package:hive/hive.dart';
 
 abstract class HomeLocalDataSource {
@@ -16,8 +15,8 @@ return box.values.toList();
   }
   @override
   List<BookEntity> fetchNewestBooks() {
-    // TODO: implement fetchNewestBooks
-    throw UnimplementedError();
+   var box=Hive.box<BookEntity>(KNewestBox);
+   return box.values.toList();
   }
 
 }
